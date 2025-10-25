@@ -1,0 +1,133 @@
+.driver-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #007bff, #00bcd4);
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
+}
+
+.driver-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 40px 30px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 420px;
+  transition: transform 0.3s ease;
+}
+
+.driver-card:hover {
+  transform: translateY(-5px);
+}
+
+.driver-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.driver-header h2 {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.back-btn {
+  position: absolute;
+  left: 0;
+  background: white;
+  color: #007bff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.back-btn:hover {
+  background: #f0f0f0;
+}
+
+.driver-text {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #e3f2fd;
+}
+
+.start-btn {
+  background: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.start-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Tracking UI */
+.tracking-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tracking-text {
+  font-size: 1rem;
+  color: #e0f7fa;
+  margin-top: 15px;
+}
+
+/* Pulse animation for active tracking */
+.pulse {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .driver-card {
+    padding: 30px 20px;
+  }
+
+  .driver-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .start-btn {
+    padding: 12px 18px;
+    font-size: 0.95rem;
+  }
+}
